@@ -23,11 +23,14 @@
     <br/>
       EXAMPLE:
       <br/>
-      ```
+      
+      
+      ```python
       if __name__ == "__main__":
             TwitterAPIFetch(
                 number_of_tweets_to_pull=1000,
                 hashtag="#coloradofires",
                 start_date="202006010000"  # YYYYMMddHHmm
             ).pipeline()
+      ```
     
