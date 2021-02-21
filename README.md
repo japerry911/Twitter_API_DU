@@ -6,6 +6,7 @@
     - TWITTER_BEARER_TOKEN
     - TWITTER_API_KEY
     - TWITTER_API_KEY_SECRET 
+    - TWITTER_ENVIRONMENT_NAME
 2. Create Python Virtual Environment
    1. verify you are running a Python3 version
       - `python --version`

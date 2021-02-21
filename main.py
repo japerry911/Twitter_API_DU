@@ -38,6 +38,7 @@ class TwitterAPIFetch:
         self.api_key_secret = os.getenv("TWITTER_API_KEY_SECRET")
         self.access_token = os.getenv("TWITTER_ACCESS_TOKEN")
         self.access_token_secret = os.getenv("TWITTER_ACCESS_TOKEN_SECRET")
+        self.environment_name = os.getenv("TWITTER_ENVIRONMENT_NAME")
         self.twitter_api = None
         self.tweets_list = [["POSTED_DATE", "TWEET_TEXT", "DATETIME_PULLED"]]
         self.logger = logging.getLogger(__name__ + "." + uuid_str)
@@ -105,7 +106,7 @@ class TwitterAPIFetch:
         """
         for tweet in tweepy.Cursor(
             self.twitter_api.search_full_archive,
-            environment_name="DevEnvironmentFArchive",
+            environment_name=self.environment_name,
             query=self.hashtag,
             fromDate=self.start_date,
             toDate=self.end_date
