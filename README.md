@@ -19,14 +19,14 @@
    4. Install the requirements.txt project dependencies
       - `pip install -r requirements.txt`
       - *** Make Sure That You Have `venv` showing in your terminal before executing install command, otherwise everything will install globally ***
-   5. Modify or use the bottom command in main.py and execute main.py
+   5. Modify or use the command in main.py and execute main.py
     <br/>
       EXAMPLE:
       <br/>
       
       
       ```python
-      if __name__ == "__main__":
+      def main():
             TwitterAPIFetch(
                 number_of_tweets_to_pull=1000,
                 hashtag="#coloradofires",
